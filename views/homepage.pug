@@ -1,0 +1,19 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Custom Object Pets
+
+        a.h1(href="/create-cobj") Add to this table
+        table(style='width:80%', border='1')
+            th Name 
+            th Bio
+            th Favorite Food
+            each pet in data
+                tr 
+                    td #{pet.properties.name}
+                    td #{pet.properties.bio}
+                    td #{pet.properties.favorite_food}
